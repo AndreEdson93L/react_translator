@@ -5,7 +5,7 @@ const apiUrl =
 
 export const orderAdd = async (user, order) => {
     try {
-        const response = await fetch(`${apiUrl}/{user.id}`, {
+        const response = await fetch(`${apiUrl}/${user.id}`, {
             method: 'PATCH',
             headers: createHeaders(),
             body: JSON.stringify({
