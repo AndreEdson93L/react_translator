@@ -13,7 +13,7 @@ const OrdersForm = ({ onOrder }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit()}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <fieldset>
         <label htmlFor="order-notes">Order notes:</label>
         <input type="text" {...register("orderNotes")} placeholder="No sugar, extra milk"/>

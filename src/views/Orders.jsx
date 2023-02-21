@@ -42,7 +42,7 @@ const Orders = () => {
 
   const handleCoffeeClicked = (coffeeId) => {
     const selectedCoffee = COFFEES.find(coffee => coffee.id === coffeeId )
-    setCoffee(selectedCoffee)
+    setCoffee(selectedCoffee)   
   };
 
   const handleOrderClicked = async (notes) => {
@@ -72,7 +72,8 @@ const Orders = () => {
       <OrdersCoffeeButton
         key={coffee.id}
         coffee={coffee}
-        onSelect={handleCoffeeClicked}
+        onSelect = {handleCoffeeClicked} 
+        //onSelect={handleCoffeeClicked}
       />
     );
   });
