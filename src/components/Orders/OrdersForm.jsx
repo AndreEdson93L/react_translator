@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import ASLTranslation from "./ASLTranslation";
 
 const OrdersForm = ({ orderNotes, onOrder, onOrderNotesChange }) => {
   const {
@@ -8,8 +9,15 @@ const OrdersForm = ({ orderNotes, onOrder, onOrderNotesChange }) => {
     formState: { errors },
   } = useForm();
 
+  const [submitted, setSubmitted] = useState(false);
+
   const onSubmit = ({ orderNotes }) => {
     onOrder(orderNotes);
+    setSubmitted(true);
+  };
+
+  const handleOrder = () => {
+    setSubmitted(false);
   };
 
   return (
@@ -26,6 +34,8 @@ const OrdersForm = ({ orderNotes, onOrder, onOrderNotesChange }) => {
       </fieldset>
 
       <button type="submit">Order</button>
+
+      {submitted && <ASLTranslation orderNotes={orderNotes} />}
     </form>
   );
 };
