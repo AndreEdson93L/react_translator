@@ -7,6 +7,8 @@ import { useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { STORAGE_KEY_USER } from "../../const/storageKey";
 
+//DON'T TOUCH
+
 const usernameConfig = {
   required: true,
   minLength: 3,
