@@ -2,7 +2,7 @@ import { createHeaders } from "./index";
 
 //const apiUrl = process.env.REACT_APP_API_URL;
 const apiUrl =
-  "https://ael-lost-in-translation-api-production.up.railway.app/coffee";
+  "https://ael-lost-in-translation-api-production.up.railway.app/translations";
 
 export const checkForUser = async (username) => {
   try {
@@ -31,7 +31,7 @@ export const createUser = async (username) => {
       headers: createHeaders(),
       body: JSON.stringify({
         username,
-        orders: [],
+        translations: [],
       }),
     });
     if (!response.ok) {
@@ -61,14 +61,13 @@ export const loginUser = async (username) => {
 
 export const userById = async (userId) => {
   try {
-    const response = await fetch(`${apiUrl}/${userId}`)
+    const response = await fetch(`${apiUrl}/${userId}`);
     if (!response.ok) {
-      throw new Error('Could not fetch user.')
+      throw new Error("Could not fetch user.");
     }
-    const user = await response.json()
-    return [null, user]
+    const user = await response.json();
+    return [null, user];
+  } catch (error) {
+    return [error.message, null];
   }
-  catch (error) {
-    return [error.message, null]
-  }
-}
+};

@@ -1,8 +1,8 @@
 import React from "react";
 
-const ASLTranslation = ({ orderNotes }) => {
+const ASLTranslation = ({ translationText }) => {
   const specialChars = ["batman", "robin", "joker", "penguin"];
-  const imageSrcs = orderNotes
+  const imageSrcs = translationText
     .toLowerCase()
     .split("")
     .map((char) => {
@@ -19,7 +19,7 @@ const ASLTranslation = ({ orderNotes }) => {
   return (
     <div>
       {imageSrcs.map((src, index) => (
-        <img key={index} src={src} alt={orderNotes} width={45} />
+        <img key={index} src={src} alt={translationText} width={45} />
       ))}
     </div>
   );

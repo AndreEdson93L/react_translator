@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import ASLTranslation from "./ASLTranslation";
 
-const OrdersForm = ({ orderNotes, onOrder, onOrderNotesChange }) => {
+const TranslationsForm = ({
+  translationText,
+  onTranslation,
+  onTranslationTextChange,
+}) => {
   const {
     register,
     handleSubmit,
@@ -12,39 +16,39 @@ const OrdersForm = ({ orderNotes, onOrder, onOrderNotesChange }) => {
   const [submitted, setSubmitted] = useState(false);
   const [previousTranslation, setPreviousTranslation] = useState("");
 
-  const onSubmit = ({ orderNotes }) => {
-    onOrder(orderNotes);
+  const onSubmit = ({ translationText }) => {
+    onTranslation(translationText);
     setSubmitted(true);
-    setPreviousTranslation(orderNotes);
+    setPreviousTranslation(translationText);
   };
 
   const handleInputChange = (value) => {
     setSubmitted(false);
-    onOrderNotesChange(value);
+    onTranslationTextChange(value);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <fieldset>
-        <label htmlFor="order-notes">Order notes:</label>
+        <label htmlFor="translation-notes">Text to translate:</label>
         <input
           type="text"
-          {...register("orderNotes")}
-          placeholder="No sugar, extra milk"
-          value={orderNotes}
+          {...register("translationText")}
+          placeholder="Please, enter the message that you want to translate!"
+          value={translationText}
           onChange={(e) => handleInputChange(e.target.value)}
         />
       </fieldset>
 
-      <button type="submit">Order</button>
+      <button type="submit">Translate</button>
 
-      {submitted && <ASLTranslation orderNotes={orderNotes} />}
+      {submitted && <ASLTranslation translationText={translationText} />}
 
       {!submitted && previousTranslation && (
-        <ASLTranslation orderNotes={previousTranslation} />
+        <ASLTranslation translationText={previousTranslation} />
       )}
     </form>
   );
 };
 
-export default OrdersForm;
+export default TranslationsForm;

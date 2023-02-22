@@ -1,1 +1,1 @@
-export const STORAGE_KEY_USER = 'coffee-user';
+export const STORAGE_KEY_USER = "translation-user";

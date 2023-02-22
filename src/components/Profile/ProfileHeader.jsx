@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProfileHeader({username}) {
   return (
-    <div>ProfileHeader Username: {username}</div>
+    <div>You are logged as: <strong>{username}</strong></div>
   )
 }
 

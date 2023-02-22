@@ -1,6 +1,6 @@
 import React from "react";
 import { useUser } from "../../context/UserContext";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 // MODIFY
 
@@ -11,9 +11,9 @@ function Navbar() {
     <nav>
       {user !== null && (
         <ul>
-          <li>Coffee Orders</li>
+          <li>Translation History</li>
           <li>
-            <NavLink to="/orders">Orders</NavLink>
+            <NavLink to="/translations">Translations</NavLink>
           </li>
           <li>
             <NavLink to="/profile">Profile</NavLink>
