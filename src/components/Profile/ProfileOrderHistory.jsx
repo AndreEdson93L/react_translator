@@ -2,7 +2,8 @@ import React from "react";
 import ProfileOrderHistoryItem from "./ProfileOrderHistoryItem";
 
 function ProfileOrderHistory({ orders }) {
-  const orderList = orders.map((order, index) => (
+  const lastTenOrders = orders.slice(-10);
+  const orderList = lastTenOrders.map((order, index) => (
     <ProfileOrderHistoryItem key={index} order={order} />
   ));
 
