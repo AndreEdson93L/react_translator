@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./views/Login";
-import Translations from "./views/Translations";
-import Profile from "./views/Profile";
+import Login from "./views/Login/Login";
+import Translations from "./views/Translations/Translations";
+import Profile from "./views/Profile/Profile";
 import Navbar from "./components/navbar/Navbar";
 
 //npm i react-router-dom

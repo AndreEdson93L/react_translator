@@ -1,0 +1,18 @@
+.translationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.translationList li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  max-width: 500px;
+  min-height: 50px;
+  padding: 10px;
+  word-wrap: break-word;
+}

@@ -28,11 +28,19 @@ function ProfileActions() {
   };
 
   return (
-    <ul>
-      <li>
-        <button onClick={handleClearHistoryClick}>Clear History</button>
-      </li>
-    </ul>
+    <button
+      style={{
+        margin: "10px",
+        padding: "5px",
+        borderRadius: "5px",
+        backgroundColor: "#007bff",
+        color: "#fff",
+        border: "none",
+      }}
+      onClick={handleClearHistoryClick}
+    >
+      Clear History
+    </button>
   );
 }
 

@@ -2,24 +2,27 @@ import React from "react";
 import { useUser } from "../../context/UserContext";
 import { NavLink } from "react-router-dom";
 import ProfileLogout from "../Profile/ProfileLogout";
-
-// MODIFY
+import "./Navbar.css"
 
 function Navbar() {
   const { user } = useUser();
 
   return (
-    <nav>
+    <nav className="navbar">
       {user !== null && (
-        <ul>
-          <li>
-            <NavLink to="/translations">Translations</NavLink>
+        <ul className="navbar__list">
+          <li className="navbar__item">
+            <NavLink to="/translations" className="navbar__link">
+              Translations
+            </NavLink>
           </li>
-          <li>
-            <NavLink to="/profile">Profile</NavLink>
+          <li className="navbar__item">
+            <NavLink to="/profile" className="navbar__link">
+              Profile
+            </NavLink>
           </li>
-          <li>
-            <ProfileLogout/>
+          <li className="navbar__item">
+            <ProfileLogout className="navbar__logout"/>
           </li>
         </ul>
       )}

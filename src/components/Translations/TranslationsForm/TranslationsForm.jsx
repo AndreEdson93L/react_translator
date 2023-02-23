@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import ASLTranslation from "./ASLTranslation";
+import ASLTranslation from "../ASLTranslation";
+import "./TranslationsForm.css";
 
 const TranslationsForm = ({
   translationText,
@@ -43,10 +44,16 @@ const TranslationsForm = ({
             <button type="submit">Translate</button>
           </fieldset>
 
-          {submitted && <ASLTranslation translationText={translationText} />}
+          {submitted && (
+            <div className="translationBox">
+              <ASLTranslation translationText={translationText} />
+            </div>
+          )}
 
           {!submitted && previousTranslation && (
-            <ASLTranslation translationText={previousTranslation} />
+            <div className="translationBox">
+              <ASLTranslation translationText={previousTranslation} />
+            </div>
           )}
         </form>
       </div>

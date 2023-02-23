@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import withAuth from "../hoc/withAuth";
-import { useUser } from "../context/UserContext";
-import TranslationsForm from "../components/Translations/TranslationsForm";
-import { translationAdd } from "../api/translation";
-import { storageSave } from "../utils/storage";
-import { STORAGE_KEY_USER } from "../const/storageKey";
+import withAuth from "../../hoc/withAuth";
+import { useUser } from "../../context/UserContext";
+import TranslationsForm from "../../components/Translations/TranslationsForm/TranslationsForm";
+import { translationAdd } from "../../api/translation";
+import { storageSave } from "../../utils/storage";
+import { STORAGE_KEY_USER } from "../../const/storageKey";
+import "./Translations.css";
 
 const Translations = () => {
   const [translationText, setTranslationText] = useState("");
@@ -28,12 +29,15 @@ const Translations = () => {
   return (
     <>
       <h1>Translations</h1>
-      <section id="translation-notes">
+      <section id="translation-container">
         <TranslationsForm
           translationText={translationText}
           onTranslation={() => handleTranslationClicked()}
           onTranslationTextChange={(value) => setTranslationText(value)}
         />
+        <div className="translation-images-container">
+          {/* Render translation images here */}
+        </div>
       </section>
     </>
   );

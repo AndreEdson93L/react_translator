@@ -1,5 +1,6 @@
 import React from "react";
-import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem";
+import ProfileTranslationHistoryItem from "../ProfileTranslationHistoryItem";
+import "./ProfileTranslationHistory.css"
 
 function ProfileTranslationHistory({ translations }) {
   const lastTenTranslations = translations.slice(-10);
@@ -10,11 +11,13 @@ function ProfileTranslationHistory({ translations }) {
 
   return (
     <section>
-      <h4>Your translation history</h4>
+      <h3>Your translation history</h3>
 
-      {translationList.length === 0 && <p>You have no translations yet.</p>}
+      {translationList.length === 0 && (
+        <span>You have no translations yet.</span>
+      )}
 
-      <ul>{translationList}</ul>
+      <ul className="translationList">{translationList}</ul>
     </section>
   );
 }

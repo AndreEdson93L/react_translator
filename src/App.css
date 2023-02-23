@@ -13,6 +13,12 @@
   }
 }
 
+.App img {
+  max-width: 400px;
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,6 +32,34 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background-color: #282c34;
+}
+
+.nav-menu li {
+  margin: 0 1rem;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-menu li a:hover {
+  color: #777;
+}
+
+.nav-menu li a.active {
+  color: dodgerblue;
 }
 
 @keyframes App-logo-spin {
