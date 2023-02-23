@@ -28,26 +28,29 @@ const TranslationsForm = ({
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <fieldset>
-        <label htmlFor="translation-notes">Text to translate:</label>
-        <input
-          type="text"
-          {...register("translationText")}
-          placeholder="Please, enter the message that you want to translate!"
-          value={translationText}
-          onChange={(e) => handleInputChange(e.target.value)}
-        />
-      </fieldset>
+    <>
+      <div className="containerTranslationsForm">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <fieldset>
+            <label htmlFor="translation-notes">Text to translate:</label>
+            <input
+              type="text"
+              {...register("translationText")}
+              placeholder="Please, enter the message that you want to translate!"
+              value={translationText}
+              onChange={(e) => handleInputChange(e.target.value)}
+            />
+            <button type="submit">Translate</button>
+          </fieldset>
 
-      <button type="submit">Translate</button>
+          {submitted && <ASLTranslation translationText={translationText} />}
 
-      {submitted && <ASLTranslation translationText={translationText} />}
-
-      {!submitted && previousTranslation && (
-        <ASLTranslation translationText={previousTranslation} />
-      )}
-    </form>
+          {!submitted && previousTranslation && (
+            <ASLTranslation translationText={previousTranslation} />
+          )}
+        </form>
+      </div>
+    </>
   );
 };
 

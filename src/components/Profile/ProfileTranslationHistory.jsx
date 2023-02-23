@@ -2,9 +2,8 @@ import React from "react";
 import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem";
 
 function ProfileTranslationHistory({ translations }) {
-  
-    const lastTenTranslations = translations.slice(-10);
-  
+  const lastTenTranslations = translations.slice(-10);
+
   const translationList = lastTenTranslations.map((translation, index) => (
     <ProfileTranslationHistoryItem key={index} translation={translation} />
   ));
