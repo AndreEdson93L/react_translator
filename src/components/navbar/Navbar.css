@@ -18,7 +18,7 @@
 }
 
 .navbar__link {
-  color: white;
+  color: #FCFFE7;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
@@ -35,7 +35,7 @@
 }
 
 .navbar__logout {
-  background-color: white;
+  background-color: #FCFFE7;
   color: #333;
   border: none;
   border-radius: 5px;
