@@ -1,3 +1,12 @@
+//#region Translations.jsx
+/*
+This is a React component called "Translations" that takes user input and saves it.
+It then calls an API to update the user's data.
+The component displays an h1 element and a section element with an id of "translation-container", and inside the section element it displays a form.
+The component is exported using a higher order component called "withAuth".
+*/
+//#endregion
+
 import React, { useState } from "react";
 import withAuth from "../../hoc/withAuth";
 import { useUser } from "../../context/UserContext";

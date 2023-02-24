@@ -1,3 +1,18 @@
+//#region ASLTranslations
+/*This is a React component that takes in a prop called translationText 
+and displays a sequence of images corresponding to each character in the 
+text.
+Spaces are replaced with an empty image, alphanumeric characters are
+ mapped to image files with their corresponding names,
+and non-alphanumeric characters are mapped to a single image file 
+named "joker.png".
+The images are displayed using <img> elements with unique keys, a 
+src attribute set to the image file path, an alt attribute set to 
+the original text, and a width of 45.
+The component is exported as the default export.
+*/
+//#endregion
+
 import React from "react";
 
 const ASLTranslation = ({ translationText }) => {

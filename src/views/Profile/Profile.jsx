@@ -1,3 +1,12 @@
+//#region Profile.jsx
+/*
+This code shows a user's profile page and includes features for authentication.
+It imports some components and functions and defines a Profile component that uses the useUser hook to retrieve and update user data.
+It also uses the useEffect hook to fetch the latest user data from the API and update the local storage.
+Finally, it renders the user's profile header, actions, and translation history.
+*/
+//#endregion
+
 import React, { useEffect } from "react";
 import { storageSave } from "../../utils/storage";
 import { userById } from "../../api/user";

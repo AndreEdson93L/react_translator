@@ -1,3 +1,18 @@
+//#region translation.js
+
+/*
+This is JavaScript code that defines two functions, 
+translationAdd and translationClearHistory, 
+which make HTTP PATCH requests to an API endpoint 
+for adding and clearing a user's translation history. 
+Both functions use the createHeaders function to set 
+the HTTP request headers and return the response body 
+if the response is OK. If the response is not OK, 
+an error is thrown and returned.
+*/
+
+//#endregion
+
 import { createHeaders } from ".";
 
 const apiUrl =

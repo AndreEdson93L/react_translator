@@ -1,5 +1,18 @@
+//#region LoginForm.jsx 
+/*
+This is a login form component in React that allows users to input their 
+username and submit the form to log in. It makes use of the useForm hook 
+from the react-hook-form library to handle form validation and submission.
+If the form is submitted successfully, it calls the loginUser function 
+from the ../../api/user module to check if the user exists and log them in.
+If the login is successful, it saves the user data in local storage and 
+sets the user context in the UserContext module. If there are errors 
+during form submission or login, it displays the appropriate error 
+messages on the page.
+*/
+//#endregion
+
 import React from "react";
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import { loginUser } from "../../api/user";

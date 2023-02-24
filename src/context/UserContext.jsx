@@ -1,3 +1,12 @@
+//#region UserContext.jsx
+/* This code creates a context for managing user state in a React application.
+It defines a UserProvider component that manages the user state using useState 
+and storageRead.
+It also defines a useUser hook that can be used to access the user state 
+within the UserProvider component.
+*/
+//#endregion
+
 import { createContext, useContext, useState } from "react";
 import { STORAGE_KEY_USER } from "../const/storageKey";
 import { storageRead } from "../utils/storage";

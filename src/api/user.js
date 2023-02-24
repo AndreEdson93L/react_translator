@@ -1,6 +1,27 @@
+//#region user.js
+
+/*
+
+This is a module that contains functions to interact with a REST API 
+that manages user information.
+The checkForUser function takes a username and sends a GET request 
+to the API to check if the user already exists. It returns an array 
+with either an error message or the user data.
+The createUser function sends a POST request to the API to create a 
+new user with the given username. It returns an array with either an 
+error message or the created user data.
+The loginUser function first calls checkForUser and if the user already 
+exists, it returns the user data. If not, it calls createUser to create 
+a new user with the given username and returns the created user data.
+The userById function takes a user ID and sends a GET request to the 
+API to fetch the user data. It returns an array with either an error 
+message or the user data.
+*/
+
+//#endregion
+
 import { createHeaders } from "./index";
 
-//const apiUrl = process.env.REACT_APP_API_URL;
 const apiUrl =
   "https://ael-lost-in-translation-api-production.up.railway.app/translations";
 
