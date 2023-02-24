@@ -41,7 +41,7 @@ const TranslationsForm = ({
               value={translationText}
               onChange={(e) => handleInputChange(e.target.value)}
             />
-            <button type="submit">Translate</button>
+            <button className="translationButton" type="submit"><span>Translate</span></button>
           </fieldset>
 
           {submitted && (

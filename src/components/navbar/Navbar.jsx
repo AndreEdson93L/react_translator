@@ -1,8 +1,8 @@
 import React from "react";
 import { useUser } from "../../context/UserContext";
 import { NavLink } from "react-router-dom";
-import ProfileLogout from "../Profile/ProfileLogout";
-import "./Navbar.css"
+import ProfileImage from "../Profile/ProfilaImage/ProfileImage";
+import "./Navbar.css";
 
 function Navbar() {
   const { user } = useUser();
@@ -11,18 +11,21 @@ function Navbar() {
     <nav className="navbar">
       {user !== null && (
         <ul className="navbar__list">
-          <li className="navbar__item">
+          <li>
             <NavLink to="/translations" className="navbar__link">
               Translations
             </NavLink>
           </li>
-          <li className="navbar__item">
+          <li>
             <NavLink to="/profile" className="navbar__link">
               Profile
             </NavLink>
           </li>
-          <li className="navbar__item">
-            <ProfileLogout className="navbar__logout"/>
+          <li>
+            <div className="navbar__profile-image-container">
+              <ProfileImage />
+              <div className="navbar__profile-image-overlay"></div>
+            </div>
           </li>
         </ul>
       )}

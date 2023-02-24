@@ -1,60 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #2b3467;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: "Permanent Marker", cursive;
+  color: #2b3467;
+}
+
+label {
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2b3467;
+}
+
+input {
+  border-radius: 40px;
+  border: 1px solid #f5f5f5;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+span.error-message {
+  display: block;
+  color: #EB455F;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.login-form-fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  min-width: 300px;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.middle {
+  position: inline-block;
+  text-align: center;
+}
+
+.confetti-button {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #2b3467;
+  color: #f5f5f5;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 25px rgba(16, 149, 232, 0.5);
+  overflow: hidden; /* to hide the confetti overflow */
+  z-index: 1; /* to position the confetti over the button */
+}
+
+.confetti-button:hover {
+  background: linear-gradient(to left, #03c988, #3e54ac, #2b3467);
+}
+
+.confetti-button:active {
+  background-color: #060047;
+  box-shadow: 0 5px #bad7e9;
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .login-container {
+    height: auto;
   }
-  
-  fieldset {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 300px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    padding: 5px;
-    border-radius: 40px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  button[type="submit"] {
-    background-color: #008CBA;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-  }
-  
-  button[type="submit"]:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: red;
-    text-align: center;
-  }
-  
-  h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 40px;
+
+  .logo-img {
+    float: none;
     margin-bottom: 20px;
   }
-  
+
+  form {
+    margin-top: 10px;
+  }
+
+  fieldset {
+    width: 100%;
+  }
+}

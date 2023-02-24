@@ -1,16 +1,18 @@
 import React from "react";
 import LoginForm from "../../components/Login/LoginForm";
-import "./Login.css"
+import "./Login.css";
 
 const Login = () => {
   return (
     <div className="login-container">
-      <img
-        src=".\resources\Logo-Hello.png"
-        alt="hello-logo"
-        className="logo-img"
-      />
-      <h1 className="title">Lost in Translation</h1>
+      <div className="inline">
+        <img
+          src=".\resources\Logo-Hello.png"
+          alt="hello-logo"
+          className="logo-img"
+        />
+        <h1 className="title">Lost in Translation</h1>
+      </div>
       <LoginForm />
     </div>
   );

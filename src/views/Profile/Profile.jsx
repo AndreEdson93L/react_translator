@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { storageSave } from "../../utils/storage";
 import { userById } from "../../api/user";
 import ProfileActions from "../../components/Profile/ProfileActions";
-import ProfileHeader from "../../components/Profile/ProfileHeader";
+import ProfileHeader from "../../components/Profile/ProfileHeader/ProfileHeader";
 import ProfileTranslationHistory from "../../components/Profile/ProfileTranslationHistory/ProfileTranslationHistory";
 import { STORAGE_KEY_USER } from "../../const/storageKey";
 import { useUser } from "../../context/UserContext";

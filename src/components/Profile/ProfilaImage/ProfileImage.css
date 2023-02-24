@@ -1,0 +1,58 @@
+.profile-image-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout-container {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 10;
+}
+
+.logout-button{
+  display: block;
+  background-color: #2b3467;
+  color: #f5f5f5;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  font-size: 16px;
+}
+
+.logout-button {
+  
+  display: block;
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 100%;
+  font-size: 0.9em;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #2b3467;
+  color: #f5f5f5;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* to hide the confetti overflow */
+  z-index: 1; /* to position the confetti over the button */
+}
+
+.logout-button:hover {
+  background: linear-gradient(to left, #03c988, #3e54ac, #2b3467);
+}
+
+.logout-button:active {
+  background-color: #060047;
+  box-shadow: 0 5px #bad7e9;
+  transform: translateY(4px);
+}

@@ -1,18 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f8f8f8;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to left, #fcffe7, #bad7e9);
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  display: inline;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 1rem 0;
+  display: inline;
+  font-family: "Permanent Marker", cursive;
+  color: #2b3467;
+}
+
+.inline {
+  display: inline;
+}
+@media (prefers-reduced-motion: no-preference) {
   .logo-img {
-    width: 100px;
-    height: 100px;
+    animation: App-logo-spin infinite 20s linear;
   }
-  
-  .title {
-    font-size: 2rem;
-    margin: 1rem 0;
+}
+
+@keyframes logo-img-spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}

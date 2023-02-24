@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import { loginUser } from "../../api/user";
@@ -8,8 +9,6 @@ import { useNavigate } from "react-router-dom";
 import { STORAGE_KEY_USER } from "../../const/storageKey";
 import "./LoginForm.css";
 
-//DON'T TOUCH
-
 const usernameConfig = {
   required: true,
   minLength: 3,
@@ -17,7 +16,6 @@ const usernameConfig = {
 
 const LoginForm = () => {
   // Hooks
-
   const {
     register,
     handleSubmit,
@@ -58,11 +56,11 @@ const LoginForm = () => {
     }
 
     if (errors.username.type === "required") {
-      return <span>Username is required</span>;
+      return <span className="error-message">Username is required</span>;
     }
 
     if (errors.username.type === "minLength") {
-      return <span>MinLength is required of 3 characters is required</span>;
+      return <span className="error-message">MinLength is required of 3 characters is required</span>;
     }
   })();
 
@@ -70,7 +68,7 @@ const LoginForm = () => {
     <>
       <h3>Get started</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset>
+        <fieldset className="login-form-fieldset">
           <label htmlFor="username">Username: </label>
           <input
             type="text"
@@ -79,10 +77,15 @@ const LoginForm = () => {
           />
           {errorMessage}
         </fieldset>
-
-        <button type="submit" disabled={loading}>
-          Continue
-        </button>
+        <div className="middle">
+          <button
+            className={`confetti-button`}
+            type="submit"
+            disabled={loading}
+          >
+            Login
+          </button>
+        </div>
         {loading && <p>Loggin in...</p>}
         {apiError && <p>{apiError}</p>}
       </form>
