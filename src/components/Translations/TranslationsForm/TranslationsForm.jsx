@@ -32,7 +32,7 @@ const TranslationsForm = ({
     <>
       <div className="containerTranslationsForm">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <fieldset>
+          <fieldset className="fieldset-box-input-text">
             <label htmlFor="translation-notes">Text to translate:</label>
             <input
               type="text"

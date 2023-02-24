@@ -9,11 +9,11 @@
   max-width: 800px;
   margin-top: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  background-color: #FCFFE7;;
 }
 
 .translationBox h2 {
@@ -33,11 +33,11 @@
   appearance: none;
   background-color: #2b3467;
   color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 2px 25px rgba(16, 149, 232, 0.5);
+  box-shadow: 0 2px 25px rgba(16, 149, 232, 0.1);
   overflow: hidden; /* to hide the confetti overflow */
   z-index: 1; /* to position the confetti over the button */
 }
@@ -70,4 +70,10 @@
   background-color: #060047;
   box-shadow: 0 5px #bad7e9;
   transform: translateY(4px);
+}
+
+.fieldset-box-input-text{
+  background-color: #FCFFE7;
+  border-radius: 10px;
+  border: #060047 1px solid;
 }

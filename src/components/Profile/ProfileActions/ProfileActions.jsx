@@ -1,8 +1,9 @@
 import React from "react";
-import { translationClearHistory } from "../../api/translation";
-import { STORAGE_KEY_USER } from "../../const/storageKey";
-import { useUser } from "../../context/UserContext";
-import { storageSave } from "../../utils/storage";
+import { translationClearHistory } from "../../../api/translation";
+import { STORAGE_KEY_USER } from "../../../const/storageKey";
+import { useUser } from "../../../context/UserContext";
+import { storageSave } from "../../../utils/storage";
+import "./ProfileActions.css";
 
 function ProfileActions() {
   const { user, setUser } = useUser();
@@ -28,17 +29,7 @@ function ProfileActions() {
   };
 
   return (
-    <button
-      style={{
-        margin: "10px",
-        padding: "5px",
-        borderRadius: "5px",
-        backgroundColor: "#007bff",
-        color: "#fff",
-        border: "none",
-      }}
-      onClick={handleClearHistoryClick}
-    >
+    <button className="clear-history-button" onClick={handleClearHistoryClick}>
       Clear History
     </button>
   );

@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+
 .profile-header {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-  }
-  
+  font-family: "Aldrich", sans-serif;
+  background-color: #fcffe7;
+  color: #060047;
+  border-radius: 10px;
+  border: #060047 1px solid;
+  padding: 30px;
+  text-align: center;
+  padding: 10px;
+  text-align: center;
+}

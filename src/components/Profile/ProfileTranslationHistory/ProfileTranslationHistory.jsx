@@ -14,7 +14,7 @@ function ProfileTranslationHistory({ translations }) {
       <h3>Your translation history</h3>
 
       {translationList.length === 0 && (
-        <span>You have no translations yet.</span>
+        <span className="translation-history-empty">¯\_(ツ)_/¯<br/>You have no translations yet.</span>
       )}
 
       <ul className="translationList">{translationList}</ul>

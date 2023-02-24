@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 body {
   background: linear-gradient(to left, #fcffe7, #bad7e9);
@@ -35,6 +36,12 @@ h1, h3, a {
 
 .App-link {
   color: #61dafb;
+}
+
+/* Target the placeholder text of all input fields */
+::placeholder {
+  color: #205295;
+  font-family: 'Kalam', cursive;
 }
 
 @media (prefers-reduced-motion: no-preference) {

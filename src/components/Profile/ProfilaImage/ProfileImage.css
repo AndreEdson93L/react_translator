@@ -16,18 +16,6 @@
   z-index: 10;
 }
 
-.logout-button{
-  display: block;
-  background-color: #2b3467;
-  color: #f5f5f5;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  
-  font-size: 16px;
-}
-
 .logout-button {
   
   display: block;
@@ -40,7 +28,7 @@
   background-color: #2b3467;
   color: #f5f5f5;
   border-radius: 4px;
-  border: none;
+  border: #FCFFE7 1px solid;
   cursor: pointer;
   position: relative;
   overflow: hidden; /* to hide the confetti overflow */

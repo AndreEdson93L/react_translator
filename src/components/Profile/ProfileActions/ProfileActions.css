@@ -1,0 +1,28 @@
+.clear-history-button {
+  display: block;
+  margin: 10px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 150px;
+  font-size: 0.9em;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #2B3467;
+  color: #FCFFE7;
+  border-radius: 10px;
+  border: #FCFFE7 1px solid;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* to hide the confetti overflow */
+  z-index: 1; /* to position the confetti over the button */
+}
+
+.clear-history-button:hover {
+  background: linear-gradient(to left, #2c74b3, #205295, #144272);
+}
+
+.clear-history-button:active {
+  background-color: #060047;
+  box-shadow: 0 5px #bad7e9;
+  transform: translateY(4px);
+}

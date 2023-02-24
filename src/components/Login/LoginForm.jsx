@@ -86,7 +86,7 @@ const LoginForm = () => {
             Login
           </button>
         </div>
-        {loading && <p>Loggin in...</p>}
+        {loading && <p>Logging in...</p>}
         {apiError && <p>{apiError}</p>}
       </form>
     </>

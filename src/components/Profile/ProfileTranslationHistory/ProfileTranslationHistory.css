@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 .translationList {
   list-style: none;
   padding: 0;
@@ -5,14 +9,21 @@
 }
 
 .translationList li {
-  background: #cce5ff;
-  color: darkblue;
+  background: #FCFFE7;
+  color: #060047;
   margin: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Kalam', cursive;
+  font-size: 1rem;
+  font-weight: bold;
   text-align: center;
   max-width: 500px;
   min-height: 50px;
   padding: 10px;
   word-wrap: break-word;
+  border-radius: 10px;
+}
+
+.translation-history-empty {
+  color: #060047;
+  font-family: 'Kalam', cursive;
 }

@@ -1,12 +1,8 @@
-import React from 'react';
-import './ProfileHeader.css';
+import React from "react";
+import "./ProfileHeader.css";
 
-function ProfileHeader({username}) {
-  return (
-    <div className="profile-header">
-      <strong>Welcome {username}!</strong>
-    </div>
-  );
+function ProfileHeader({ username }) {
+  return <div className="profile-header">Welcome {username}!</div>;
 }
 
 export default ProfileHeader;
